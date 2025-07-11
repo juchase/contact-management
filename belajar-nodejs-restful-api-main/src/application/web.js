@@ -6,7 +6,12 @@ import cors from "cors";
 
 export const web = express();
 web.use(express.json());
-web.use(cors());
+web.use(
+  cors({
+    origin: ["https://contact-management-sandy-nu.vercel.app/"], // tambahkan frontend URL di sini
+    credentials: true,
+  })
+);
 
 web.use(publicRouter);
 web.use(userRouter);
