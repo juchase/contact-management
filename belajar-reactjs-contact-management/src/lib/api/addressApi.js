@@ -25,7 +25,7 @@ export const adressCreate = async (
 
 export const addressList = async (token, id) => {
   return await fetch(
-    `${import.meta.env.VITE_API_PATH}/contacts/${id}/addresses`,
+    `${import.meta.env.VITE_API_URL}/contacts/${id}/addresses`,
     {
       method: "GET",
       headers: {
@@ -38,7 +38,7 @@ export const addressList = async (token, id) => {
 
 export const addressDetail = async (token, id, addressId) => {
   return await fetch(
-    `${import.meta.env.VITE_API_PATH}/contacts/${id}/addresses/${addressId}`,
+    `${import.meta.env.VITE_API_URL}/contacts/${id}/addresses/${addressId}`,
     {
       method: "GET",
       headers: {
@@ -55,7 +55,7 @@ export const adressUpdate = async (
   { addressId, street, city, province, country, postal_code }
 ) => {
   return await fetch(
-    `${import.meta.env.VITE_API_PATH}/contacts/${id}/addresses/${addressId}`,
+    `${import.meta.env.VITE_API_URL}/contacts/${id}/addresses/${addressId}`,
     {
       method: "PUT",
       headers: {
@@ -76,7 +76,7 @@ export const adressUpdate = async (
 
 export const addressDelete = async (token, id, addressId) => {
   return await fetch(
-    `${import.meta.env.VITE_API_PATH}/contacts/${id}/addresses/${addressId}`,
+    `${import.meta.env.VITE_API_URL}/contacts/${id}/addresses/${addressId}`,
     {
       method: "DELETE",
       headers: {

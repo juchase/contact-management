@@ -1,5 +1,5 @@
 export const userRegister = async ({ username, password, name }) => {
-  return await fetch(`${import.meta.env.VITE_API_PATH}/users`, {
+  return await fetch(`${import.meta.env.VITE_API_URL}/users`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export const userLogin = async ({ username, password }) => {
 };
 
 export const userUpdateProfile = async (token, { name }) => {
-  return await fetch(`${import.meta.env.VITE_API_PATH}/users/current`, {
+  return await fetch(`${import.meta.env.VITE_API_URL}/users/current`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export const userUpdateProfile = async (token, { name }) => {
 };
 
 export const userUpdatePassword = async (token, { password }) => {
-  return await fetch(`${import.meta.env.VITE_API_PATH}/users/current`, {
+  return await fetch(`${import.meta.env.VITE_API_URL}/users/current`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export const userUpdatePassword = async (token, { password }) => {
 };
 
 export const userDetail = async (token) => {
-  return await fetch(`${import.meta.env.VITE_API_PATH}/users/current`, {
+  return await fetch(`${import.meta.env.VITE_API_URL}/users/current`, {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -55,7 +55,7 @@ export const userDetail = async (token) => {
 };
 
 export const userLogout = async (token) => {
-  return await fetch(`${import.meta.env.VITE_API_PATH}/users/logout`, {
+  return await fetch(`${import.meta.env.VITE_API_URL}/users/logout`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
