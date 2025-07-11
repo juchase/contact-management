@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { alertError, alertSuccess } from "../../lib/alert";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function UserRegister() {
   const [username, setUsername] = useState("");
