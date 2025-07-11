@@ -13,7 +13,7 @@ import ContactEdit from "./components/Contact/ContactEdit";
 import ContactDetail from "./components/Contact/ContactDetail";
 import AddressCreate from "./components/address/AddressCreate";
 import AdressEdit from "./components/address/AddressEdit";
-import Index from ".";
+import Index from "./Index";
 import "./style.css";
 
 createRoot(document.getElementById("root")).render(
