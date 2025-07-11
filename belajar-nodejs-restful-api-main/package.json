@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "test": "jest -i",
-    "server": "src/main.js"
+    "start": "node src/main.js"
   },
   "jest": {
     "transform": {
