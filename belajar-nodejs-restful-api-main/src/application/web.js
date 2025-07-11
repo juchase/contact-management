@@ -8,7 +8,11 @@ export const web = express();
 web.use(express.json());
 web.use(
   cors({
-    origin: ["https://contact-management-sandy-nu.vercel.app/"], // tambahkan frontend URL di sini
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://contact-management-sandy-nu.vercel.app/",
+    ], // tambahkan frontend URL di sini
     credentials: true,
   })
 );
