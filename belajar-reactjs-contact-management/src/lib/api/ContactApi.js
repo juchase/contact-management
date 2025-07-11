@@ -4,7 +4,7 @@ export const contactCreate = async (
   token,
   { first_name, last_name, email, phone }
 ) => {
-  return await fetch(`${import.meta.env.VITE_API_PATH}/contacts`, {
+  return await fetch(`${import.meta.env.VITE_API_URL}/contacts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

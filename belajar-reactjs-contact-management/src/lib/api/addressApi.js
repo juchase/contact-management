@@ -4,7 +4,7 @@ export const adressCreate = async (
   { street, city, province, country, postal_code }
 ) => {
   return await fetch(
-    `${import.meta.env.VITE_API_PATH}/contacts/${id}/addresses`,
+    `${import.meta.env.VITE_API_URL}/contacts/${id}/addresses`,
     {
       method: "POST",
       headers: {
