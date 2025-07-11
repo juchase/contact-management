@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { alertError, alertSuccess } from "../../lib/alert";
 import { Link, useNavigate } from "react-router-dom";
+import { userRegister } from "../../lib/api/UserApi";
 
 export default function UserRegister() {
   const [username, setUsername] = useState("");
@@ -18,7 +19,7 @@ export default function UserRegister() {
       return;
     }
 
-    const response = await UserRegister({
+    const response = await userRegister({
       username: username,
       name: name,
       password: password,
