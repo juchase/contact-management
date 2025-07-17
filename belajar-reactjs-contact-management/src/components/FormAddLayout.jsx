@@ -1,3 +1,3 @@
-export default function FormAddLayout({ children }) {
-  return <form>{children}</form>;
+export default function FormAddLayout({ children, onSubmit }) {
+  return <form onSubmit={onSubmit}>{children}</form>;
 }
