@@ -1,6 +1,6 @@
 import { useEffectOnce, useLocalStorage } from "react-use";
 import { userDetail } from "./lib/api/UserApi";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { alertError } from "./lib/alert";
 
 export default function Index() {

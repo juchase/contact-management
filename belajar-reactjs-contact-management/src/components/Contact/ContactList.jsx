@@ -6,7 +6,7 @@ import {
   deleteContact,
 } from "../../lib/api/ContactApi";
 import { alertError, alertSuccess } from "../../lib/alert";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { userDetail } from "../../lib/api/UserApi";
 import CardListUserLayout from "../CardListUserLayout";
 import FormAddLayout from "../FormAddLayout";
