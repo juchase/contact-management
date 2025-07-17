@@ -17,6 +17,10 @@ web.use(
   })
 );
 
+web.get("/", (req, res) => {
+  res.json({ message: "API is running ✅" });
+});
+
 web.use(publicRouter);
 web.use(userRouter);
 
