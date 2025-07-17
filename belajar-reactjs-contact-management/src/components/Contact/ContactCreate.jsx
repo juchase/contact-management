@@ -16,6 +16,7 @@ export default function ContactCreate() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log("Submit Triggered");
 
     const response = await contactCreate(token, {
       first_name,
