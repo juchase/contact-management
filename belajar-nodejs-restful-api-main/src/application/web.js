@@ -11,7 +11,7 @@ web.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:3000",
-      "https://contact-management-sandy-nu.vercel.app/",
+      "https://contact-management-sandy-nu.vercel.app",
     ], // tambahkan frontend URL di sini
     credentials: true,
   })
