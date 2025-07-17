@@ -11,7 +11,7 @@ web.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:3000",
-      "https://contact-management-gt2l4eqwl-juchases-projects.vercel.app",
+      "https://contact-management-f4daj11oa-juchases-projects.vercel.app",
     ], // tambahkan frontend URL di sini
     credentials: true,
   })
