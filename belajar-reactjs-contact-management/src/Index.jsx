@@ -7,7 +7,7 @@ export default function Index() {
 
   useEffectOnce(() => {
     if (token) {
-      navigate("/dashboard");
+      navigate("/dashboard/contacts");
     } else {
       navigate("/login");
     }
