@@ -7,7 +7,6 @@ import {
 } from "../../lib/api/ContactApi";
 import { alertError, alertSuccess } from "../../lib/alert";
 import { Link, useNavigate } from "react-router-dom";
-import { userDetail } from "../../lib/api/UserApi";
 import CardListUserLayout from "../CardListUserLayout";
 import FormAddLayout from "../FormAddLayout";
 
@@ -22,24 +21,13 @@ export default function ContactList() {
   const [reload, setReload] = useState(false);
   const navigate = useNavigate();
 
-  async function authorization() {
-    try {
-      const response = await userDetail(token);
-      const responseBody = await response.json();
-      if (response.status !== 200) {
-        throw new Error(responseBody);
-      }
-      return responseBody;
-    } catch {
-      await alertError("Anda belum login!");
-      navigate({
-        pathname: "/login",
-      });
-    }
-  }
-
   useEffectOnce(() => {
-    authorization();
+    if (!token) {
+      alertError("You must be logged in to access this page.");
+      navigate("/login");
+    } else {
+      navigate("/dashboard/contacts");
+    }
   });
 
   function getPages() {
