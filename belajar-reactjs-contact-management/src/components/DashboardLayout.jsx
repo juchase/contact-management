@@ -1,6 +1,20 @@
 import { Link, Outlet } from "react-router-dom";
+import { useEffectOnce } from "react-use";
+import { useLocalStorage } from "react-use";
+import { useNavigate } from "react-router-dom";
 
 export default function DashboardLayout() {
+  const [token] = useLocalStorage("token");
+  const navigate = useNavigate();
+
+  useEffectOnce(() => {
+    if (!token) {
+      navigate("/login");
+    } else {
+      navigate("/dashboard/contacts");
+    }
+  }, [token, navigate]);
+
   return (
     <>
       <div className="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen flex flex-col">
