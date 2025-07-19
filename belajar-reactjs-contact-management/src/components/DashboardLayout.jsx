@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useEffectOnce } from "react-use";
 import { useLocalStorage } from "react-use";
 import { useNavigate } from "react-router-dom";
+import { alertError } from "../lib/alert";
 
 export default function DashboardLayout() {
   const [token] = useLocalStorage("token");
@@ -9,6 +10,7 @@ export default function DashboardLayout() {
 
   useEffectOnce(() => {
     if (!token) {
+      alertError("You must be logged in to access this page.");
       navigate("/login");
     } else {
       navigate("/dashboard/contacts");
